@@ -4,6 +4,7 @@ pipeline {
         stage ('checkout') { 
             steps {
                 sh "pwd"
+                sh ""
             }
         }
         stage ('build') { 
