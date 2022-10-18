@@ -18,7 +18,6 @@ pipeline {
         stage ('deploy') { 
              steps {
                 sh "cp /home/slave1/workspace/pipelinejob1/target/hello-world-war-1.0.0.war /opt/tomcat/webapps"
-                 sh "sudo systemctl restart tomcat.service"
              }
         }
         stage ('QA') { 
