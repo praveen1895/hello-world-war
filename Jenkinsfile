@@ -1,18 +1,17 @@
 pipeline { 
-    agent { label 'slave1' } 
+    agent any {label 'slave1'}
     stages { 
-        stage ('Checkout') { 
+        stage ('Build') { 
             steps {
-                sh "pwd"
-                
+                echo "Building"
             }
         }
-        stage ('Build') { 
+        stage ('Test') { 
              steps {
-                echo "praveen"
+                echo "Testing"
              }
         }
-        stage ('Deploy') { 
+        stage ('QA') { 
              steps {
                 echo "QA"
              }
