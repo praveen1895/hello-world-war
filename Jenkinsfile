@@ -17,8 +17,8 @@ pipeline {
         }
         stage ('deploy') { 
              steps {
-                 sh "rm -rf /opt/tomcat/webapps/hello-world-war-1.0.0"
-                 sh "rm -rf /opt/tomcat/webapps/hello-world-war-1.0.0.war"
+                 sh "sudo rm -rf /opt/tomcat/webapps/hello-world-war-1.0.0"
+                 sh "sudo rm -rf /opt/tomcat/webapps/hello-world-war-1.0.0.war"
                 sh "cp /home/slave1/workspace/pipelinejob1/target/hello-world-war-1.0.0.war /opt/tomcat/webapps"
              }
         }
