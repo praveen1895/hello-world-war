@@ -8,9 +8,11 @@ pipeline {
                 sh "git clone https://github.com/praveen1895/hello-world-war.git"
             }
         }
-        stage ('Test') { 
+        stage ('build') { 
              steps {
-                echo "Testing"
+                sh "ls"
+                sh "cd hello-world-war"
+                sh "mvn clean package"
              }
         }
         stage ('QA') { 
